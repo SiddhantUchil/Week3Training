@@ -1,0 +1,18 @@
+library("swirl")
+swirl()
+head(flags)
+dim(flags)
+viewinfo()
+class(flags)
+cls_list <- lapply(flags, class)
+cls_list
+class(cls_list)
+as.character(cls_list)
+cls_vect <- sapply(flags, class)
+class(cls_vect)
+sum(flags$orange)
+flag_colors <- flags[, 11:17]
+head(flag_colors)
+lapply(flag_colors, sum)
+sapply(flag_colors, sum)
+sapply(flag_colors, mean)

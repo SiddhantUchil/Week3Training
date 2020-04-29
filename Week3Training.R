@@ -16,6 +16,8 @@ head(flag_colors)
 lapply(flag_colors, sum)
 sapply(flag_colors, sum)
 sapply(flag_colors, mean)
+
+
 flag_shapes <- flags[, 19:23]
 lapply(flag_shapes, range)
 shape_mat <- sapply(flag_shapes, range)
@@ -27,3 +29,16 @@ unique_vals
 sapply(unique_vals, length)
 sapply(flags, unique)
 lapply(unique_vals, function(elem) elem[2])
+
+
+
+vapply(flags, unique, numeric(1))
+ok()
+sapply(flags, class)
+vapply(flags, class, character(1))
+?tapply
+table(flags$landmass)
+table(flags$animate)
+tapply(flags$animate, flags$landmass, mean)
+tapply(flags$population, flags$red, summary)
+tapply(flags$population, flags$landmass, summary)
